@@ -1,0 +1,17 @@
+.login.header__navbar-list-item:nth-child(8):hover:after
+{
+    display: block;
+}
+.login.header__navbar-list-item:nth-child(8):after
+{
+position: absolute;
+content: "";
+width: 47px;
+height: 3px;
+right: 12px;
+border-radius: 2px;
+top: 68%;
+background-color: var(--white-color);
+display: none;
+animation: fadeIn1 ease-in-out 400ms;
+}
