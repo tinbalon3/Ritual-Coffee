@@ -139,24 +139,7 @@
 
 
 
-                // hover on imgs at blog and display search
-                for(let i=0;i<blog_list.length;i++)
-                {
-                blog_list[i].addEventListener('mouseover',function()
-                {
-                search_blog[i].classList.add('open');
-                layout_blog[i].classList.add('open');
-                })
-                }
-                for(let i=0;i<blog_list.length;i++)
-                {
-                blog_list[i].addEventListener('mouseout',function()
-                {
-                search_blog[i].classList.remove('open');
-                layout_blog[i].classList.remove('open');
-                })
-                }
-                // end
+                
                 // Modal blog
                 for(let i=0;i<search_blog.length;i++)
                 {
@@ -265,10 +248,12 @@
                     if(x==1)
                     {
                         images.style.backgroundImage = "url('/Web-index/img/header1.jpg')";
+                       
                     }
                     if(x==2)
                     {
                         images.style.backgroundImage = "url('/Web-index/img/header.jpg')";
+                        
                         x=0;
                     }
                 }

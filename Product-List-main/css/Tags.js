@@ -434,6 +434,7 @@ function RenderFirstAroma()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
 }
 
 function RenderFirstBeans()
@@ -462,6 +463,7 @@ function RenderFirstBeans()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
 }
 
 function RenderFirstBlack()
@@ -490,6 +492,7 @@ function RenderFirstBlack()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
 }
 
 function RenderFirstCasual()
@@ -518,6 +521,7 @@ function RenderFirstCasual()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
 }
 
 function RenderFirstClassic()
@@ -546,6 +550,7 @@ function RenderFirstClassic()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
 }
 
 function RenderFirstCream()
@@ -574,6 +579,7 @@ function RenderFirstCream()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
 }
 
 function RenderFirstElegant()
@@ -602,6 +608,7 @@ function RenderFirstElegant()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
 }
 
 function RenderFirstFresh()
@@ -630,5 +637,6 @@ function RenderFirstFresh()
                     `
     })
     productList.innerHTML = firstpage.join('');
+    document.querySelector('.body__page-number-list').style.display ='none';
    }
 

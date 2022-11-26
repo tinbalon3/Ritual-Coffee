@@ -16,21 +16,21 @@
     <body>
         <div id="main">
             <div class="header js-header">
-                <div class="grid wide">
-                    <div class="header__navbar">
-                          <div class="header__navbar-item-img">
-                                    <img src="/Product-List-main/img/logo.png" alt="" class="header-item-img">
+                <div class="container">
+                    <div class="row">
+                        <div class="header__navbar col-lg-12 col-md-12">
+                          <div class="header__navbar-item-img col-lg-2 ">
+                                <img src="./img/logo.png" alt="" class="header-item-img">
                          </div>
+                         <div class="list col-lg-10">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-list-item">
-                                <a href="/Web-index/index_login_success.html" class="header__navbar-item-link">Home</a>
+                                <a href="" class="header__navbar-item-link">Home</a>
                                 </li>
                             <li class="header__navbar-list-item">
                                 <a href="/About-us-main/index_aboutus.html" class="header__navbar-item-link">About Us</a>
                                 </li>
-                            <li class="header__navbar-list-item">
-                                <a href="#section_id" class="header__navbar-item-link">Services</a>
-                                </li>
+                           
                             <li class="header__navbar-list-item">
                                 <a href="/Ritual-Coffee_-Gallery-main/index_gallery.html" class="header__navbar-item-link"> Gallery</a>
                                </li>
@@ -40,15 +40,18 @@
                             <li class="header__navbar-list-item">
                                 <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
                                 </li>
-                            <li class="header__navbar-list-item">
-                                <a href="/Product-List-main/index_productList.html" class="header__navbar-item-link">Products</a>
-                                </li>
-                            <li class="header__navbar-list-item login">
-                                <a href="/Web-index/login.html" class="header__navbar-item-link">Login</a>
-                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link">Product</a>
+                                    </li>
+                                    <li class="header__navbar-list-item">
+                                        <a href="/Web-index/login.html" class="header__navbar-item-link">Login</a>
+                                    </li>
+                                
                         </ul>
                     </div>
+                    </div>
                 </div>
+            </div>
             </div>
             <div id="body">
                 <div class="body__slider">
@@ -222,41 +225,55 @@
                             </div>
                         </div>
                         <div class="widget-filter">
+                            <h2 class="widget-title">Price</h2>
                             <div class="form_option">
+                                
                                 <form action="" class="option_price">
                                     <div class="filter-price-checkbox">
                                         <div class="squaredcheck">
-                                            <input type="radio" value="1" id="squaredcheck" class="checkbox" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">0 - 50$</span></label>
+                                            <label for="squaredcheck"><span class="squaredcheck-price">To</span></label>
+                                            <input type="number"  id="squaredcheck" min="1" onchange="setMin()" class="checkbox" placeholder="price $" name="check"/>
                                         </div>
                                         <div class="squaredcheck">
-                                            <input type="radio" value="2" id="squaredcheck" class="checkbox" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">51 - 100$</span></label>
+                                            <label for="squaredcheck"><span class="squaredcheck-price">From</span></label>
+                                            <input type="number"  id="squaredcheck" min="" class="checkbox" placeholder="price $" name="check"/>
                                         </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="3" id="squaredcheck" class="checkbox" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Over 100$</span></label>
-                                        </div>
+                                       
                                     </div>
                                 </form>
+                                <h2 class="widget-title">Category</h2>
                                 <form action="" class="option_types">
-                                    <div class="filter-price-checkbox">
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="1" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Black</span></label>
+                                    <div class="filter-types">
+                                            <div class="type">
+                                                <div class="squaredcheck">
+                                                    <input type="radio" value="1" id="checktype" class="phanloai" name="check" checked />
+                                                    <label for="squaredcheck"><span class="squaredcheck-price">Accessories</span></label>
+                                                </div>
+                                                <div class="squaredcheck">
+                                                    <input type="radio" value="2" id="checktype" class="phanloai" name="check" checked />
+                                                    <label for="squaredcheck"><span class="squaredcheck-price">Bean Varieties</span></label>
+                                                </div>
+                                                <div class="squaredcheck">
+                                                    <input type="radio" value="3" id="checktype" class="phanloai" name="check" checked />
+                                                    <label for="squaredcheck"><span class="squaredcheck-price">Coffee Cups</span></label>
+                                                </div>
+                                            </div>
+                                        <div class="type">
+                                            <div class="squaredcheck">
+                                                <input type="radio" value="4" id="checktype" class="phanloai" name="check" checked />
+                                                <label for="squaredcheck"><span class="squaredcheck-price">Espresso Machine</span></label>
+                                            </div>
+                                            <div class="squaredcheck">
+                                                <input type="radio" value="5" id="checktype" class="phanloai" name="check" checked />
+                                                <label for="squaredcheck"><span class="squaredcheck-price">Fresh Coffee</span></label>
+                                            </div>
+                                            <div class="squaredcheck">
+                                                <input type="radio" value="6" id="checktype" class="phanloai" name="check" checked />
+                                                <label for="squaredcheck"><span class="squaredcheck-price">Italian Coffee</span></label>
+                                            </div>
                                         </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="2" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Latte</span></label>
-                                        </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="3" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Cappucino</span></label>
-                                        </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="3" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Americano</span></label>
-                                        </div>
+                                        
+                                    
                                     </div>
                                 </form>
                             </div>
@@ -264,7 +281,7 @@
                                     <button class="price-filter">
                                         <span class="price-filter-text">Filter</span>
                                     </button>
-                                    <button class="clear-button" onclick="ClearOption(option,option_product)">
+                                    <button class="clear-button" onclick="ClearOption()">
                                         <span class="clear-option">Clear</span>
                                     </button>
                                 </div>
@@ -377,7 +394,7 @@
                                     <a href="" class="body__page-number-link body__page-number--curent-color">1</a>
                                 </li>
                                 <li class="body__page-number-item">
-                                    <a href="./html/Page2_ProductList.html" class="body__page-number-link">2</a>
+                                    <a href="./html/Page2_ProductList_no_login.html" class="body__page-number-link">2</a>
                                 </li>
                                 <li class="body__page-number-item">
                                     <a href="./html/Page2_ProductList.html" class="body__page-number-link">

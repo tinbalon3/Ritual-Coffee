@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Product list</title>
         <link rel="stylesheet" href="/Product-List-main/css/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/base.css">
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700&family=Inconsolata:wght@200;300;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -11,25 +12,23 @@
         <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/css/all.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <div id="main">
             <div class="header js-header">
-                <div class="grid wide">
-                    <div class="header__navbar">
-                          <div class="header__navbar-item-img">
-                                    <img src="/Product-List-main/img/logo.png" alt="" class="header-item-img">
+                <div class="container">
+                    <div class="row">
+                        <div class="header__navbar col-lg-12 col-md-12">
+                          <div class="header__navbar-item-img col-lg-2 ">
+                                <img src="./img/logo.png" alt="" class="header-item-img">
                          </div>
+                         <div class="list col-lg-10">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-list-item">
                                 <a href="/Web-index/index_login_success.html" class="header__navbar-item-link">Home</a>
                                 </li>
                             <li class="header__navbar-list-item">
                                 <a href="/About-us-main/index_aboutus.html" class="header__navbar-item-link">About Us</a>
-                                </li>
-                            <li class="header__navbar-list-item">
-                                <a href="#section_id" class="header__navbar-item-link">Services</a>
                                 </li>
                             <li class="header__navbar-list-item">
                                 <a href="/Ritual-Coffee_-Gallery-main/index_gallery.html" class="header__navbar-item-link"> Gallery</a>
@@ -41,12 +40,36 @@
                                 <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
                                 </li>
                             <li class="header__navbar-list-item">
-                                <a href="/Product-List-main/index_productList.html" class="header__navbar-item-link">Products</a>
+                                    <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link">Product</a>
                                 </li>
-                           
+                            <li class="header__navbar-list-item">
+                                <div class="avatar">
+                                    <div class="icon_avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                    <div class="name_user">
+                                        <p class="username_customer">Văn Sìnl</p>
+                                    </div>
+                                </div>
+                                <div class="nav_ava">
+                                    <div class="nav_ava_list">
+                                        
+                                        <div class="nav_ava_icon_out">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                        </div>
+                                        <div class="nav_ava_a">
+                                            <a href="/Web-index/index.html">Log out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span"></div>
+                            </li>
+                                
                         </ul>
                     </div>
+                    </div>
                 </div>
+            </div>
             </div>
             <div id="body">
                 <div class="body__slider">
@@ -60,153 +83,7 @@
                     <div class="row">
                 <div class=" col-lg-9 padding-150px">
                             <div class="row main-content">
-                            <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/productList-img-1.png" alt="Product image" class="body__product-img">
-                                <div class="body__product-img--modal">
-                                    <a href="/Product-List-main/html/Detail_ProductList.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-            
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Ethiopia Coffee</h2>
-                                <h3 class="body__product-price">$15.99</h3>
-                            </div>
-                        </div>
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/productList-img-21.png" alt="Product image" class="body__product-img">
-                                <div class="body__product-img--modal">
-                                    <a href="./html/Detail_FrenchPress.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">French Press</h2>
-                                <h3 class="body__product-price">$23.99</h3>
-                            </div>
-                        </div>
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/productList-img-3.png" alt="Product image" class="body__product-img">
-                                <div class="body__product-img--modal">
-                                    <a href="./html/Detail_KenyaCoffee.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Kenya Coffee</h2>
-                                <h3 class="body__product-price">$18.00</h3>
-                            </div>
-                        </div>
-                        
-                 
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/backgroundCopy_1.png" alt="Product image" class="body__product-img ">
-                                <div class="body__product-img--modal">
-                                    <a href="./html/Detail_DolceGusto.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Dolce Gusto</h2>
-                                <h3 class="body__product-price">$12.00</h3>
-                            </div>
-                        </div>
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/productList-img-5.png" alt="Product image" class="body__product-img">
-                               <div class="body__product-img--modal">
-                                    <a href="/Product-List-main/html/Detai_ColumbiaCoffee.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Columbia Coffee</h2>
-                                <h3 class="body__product-price">$21.00</h3>
-                            </div>
-                        </div>
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/ProductList-img-6.png" alt="Product image" class="body__product-img body__product-img--padding">
-                                <div class="body__product-img--modal">
-                                    <a href="./html/Detail_CoffeeKettle.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Coffee Kettle</h2>
-                                <h3 class="body__product-price">$90.00</h3>
-                            </div>
-                        </div>
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/ProductList-img-7.png" alt="Product image" class="body__product-img body__product-img--padding">
-                                <div class="body__product-img--modal">
-                                    <a href="./html/Detail_EspressoMachine.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Espresso Machine</h2>
-                                <h3 class="body__product-price">$600.00</h3>
-                            </div>
-                        </div>
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/product-img-8.png" alt="Product image" class="body__product-img body__product-img--padding">
-                                <div class="body__product-img--modal">
-                                    <a href="./html/Detail_Guatemala.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Guatemala Coffee</h2>
-                                <h3 class="body__product-price">$25.00</h3>
-                            </div>
-                        </div>
-                        <div class="body__product col-lg-4" data-aos="fade-up" >
-                            <div class="body__product-img-content">
-                                <img src="./img/ProductList-img-9.png" alt="Product image" class="body__product-img body__product-img--padding">
-                                <div class="body__product-img--modal">
-                                    <a href="./html/Detail_FilterHandle.html" class="body__product-img--modal-link">
-                                        <div class="body__product-button--modal">
-                                            <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="body__product-text"> 
-                                <h2 class="body__product-name">Filter handle</h2>
-                                <h3 class="body__product-price">$80.00</h3>
-                            </div>
-                        </div>
+                         
                     </div>
                 
                 </div>
@@ -220,41 +97,55 @@
                             </div>
                         </div>
                         <div class="widget-filter">
+                            <h2 class="widget-title">Price</h2>
                             <div class="form_option">
+                                
                                 <form action="" class="option_price">
                                     <div class="filter-price-checkbox">
                                         <div class="squaredcheck">
-                                            <input type="radio" value="1" id="squaredcheck" class="checkbox" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">0 - 50$</span></label>
+                                            <label for="squaredcheck"><span class="squaredcheck-price">To</span></label>
+                                            <input type="number"  id="squaredcheck" min="1" onchange="setMin()" class="checkbox" placeholder="price $" name="check"/>
                                         </div>
                                         <div class="squaredcheck">
-                                            <input type="radio" value="2" id="squaredcheck" class="checkbox" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">51 - 100$</span></label>
+                                            <label for="squaredcheck"><span class="squaredcheck-price">From</span></label>
+                                            <input type="number"  id="squaredcheck" min="" class="checkbox" placeholder="price $" name="check"/>
                                         </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="3" id="squaredcheck" class="checkbox" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Over 100$</span></label>
-                                        </div>
+                                       
                                     </div>
                                 </form>
+                                <h2 class="widget-title">Category</h2>
                                 <form action="" class="option_types">
-                                    <div class="filter-price-checkbox">
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="1" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Black</span></label>
+                                    <div class="filter-types">
+                                            <div class="type">
+                                                <div class="squaredcheck">
+                                                    <input type="radio" value="1" id="checktype" class="phanloai" name="check" checked />
+                                                    <label for="squaredcheck"><span class="squaredcheck-price">Accessories</span></label>
+                                                </div>
+                                                <div class="squaredcheck">
+                                                    <input type="radio" value="2" id="checktype" class="phanloai" name="check" checked />
+                                                    <label for="squaredcheck"><span class="squaredcheck-price">Bean Varieties</span></label>
+                                                </div>
+                                                <div class="squaredcheck">
+                                                    <input type="radio" value="3" id="checktype" class="phanloai" name="check" checked />
+                                                    <label for="squaredcheck"><span class="squaredcheck-price">Coffee Cups</span></label>
+                                                </div>
+                                            </div>
+                                        <div class="type">
+                                            <div class="squaredcheck">
+                                                <input type="radio" value="4" id="checktype" class="phanloai" name="check" checked />
+                                                <label for="squaredcheck"><span class="squaredcheck-price">Espresso Machine</span></label>
+                                            </div>
+                                            <div class="squaredcheck">
+                                                <input type="radio" value="5" id="checktype" class="phanloai" name="check" checked />
+                                                <label for="squaredcheck"><span class="squaredcheck-price">Fresh Coffee</span></label>
+                                            </div>
+                                            <div class="squaredcheck">
+                                                <input type="radio" value="6" id="checktype" class="phanloai" name="check" checked />
+                                                <label for="squaredcheck"><span class="squaredcheck-price">Italian Coffee</span></label>
+                                            </div>
                                         </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="2" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Latte</span></label>
-                                        </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="3" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Cappucino</span></label>
-                                        </div>
-                                        <div class="squaredcheck">
-                                            <input type="radio" value="3" id="squaredcheck" class="phanloai" name="check" checked />
-                                            <label for="squaredcheck"><span class="squaredcheck-price">Americano</span></label>
-                                        </div>
+                                        
+                                    
                                     </div>
                                 </form>
                             </div>
@@ -262,7 +153,7 @@
                                     <button class="price-filter">
                                         <span class="price-filter-text">Filter</span>
                                     </button>
-                                    <button class="clear-button" onclick="ClearOption(option,option_product)">
+                                    <button class="clear-button" onclick="ClearOption()">
                                         <span class="clear-option">Clear</span>
                                     </button>
                                 </div>
@@ -366,7 +257,7 @@
                         </a>
                     </div>
                 </div>
-                </div>
+               
                 <div class="body__page-number col-lg-12">
                     <div class="body__page-number-container">
                         <nav class="body__page-number-nav">
@@ -561,15 +452,17 @@
             }
             AOS.init();
 
-            // const slide = document.querySelector("#slide")
-            // const output = document.querySelector("#output")
-            // const showValue = () =>{
-            // output.textContent = slide.value
-            // }
-            // slide.oninput = () => {
-            // showValue()
-            // }
-            // showValue()
+        function setWidth()
+        {
+            //Set width span nav_user
+            const widthOfname=document.querySelector('.username_customer').offsetWidth;
+            const usertNameElement = document.querySelector('.span');
+            console.log(widthOfname)
+            usertNameElement.style.width=widthOfname+'px';
+        }
+        var credentials = JSON.parse(localStorage.getItem("credentials"));
+            document.querySelector('.username_customer').innerHTML=credentials.name;
+            setWidth();
         </script>
         <script src="./css/search.js"></script>
         <script src="./css/Category.js"></script>

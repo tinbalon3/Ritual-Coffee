@@ -1,8 +1,8 @@
-.login.header__navbar-list-item:nth-child(8):hover:after
+.login.header__navbar-list-item:nth-child(7):hover:after
 {
     display: block;
 }
-.login.header__navbar-list-item:nth-child(8):after
+.login.header__navbar-list-item:nth-child(7):after
 {
 position: absolute;
 content: "";

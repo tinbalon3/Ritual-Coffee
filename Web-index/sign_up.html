@@ -71,6 +71,11 @@
                     <input type="password" id="password" name="password" class="js-pass form-control" placeholder="6+character">
                     <span class="form-message"></span>
                    </div>
+                   <div class="signUP_password form-group">
+                    <label for="confirmPassword">Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="js-pass form-control" placeholder="Comfirm password">
+                    <span class="form-message"></span>
+                   </div>
                    <div class="form-field form-group">
                     <div class="notifi">
                         <input type="checkbox" id="user_agree_to_terms" name="user[agree_to_terms]">
@@ -123,6 +128,12 @@
             formGroupSelector: '.form-group',
             rules: [
                 Validator.isRequired('#fullname','Please enter this field'),
+                Validator.isRequired('#confirmPassword','Please enter this field'),
+                Validator.isConfirmed('#confirmPassword',function()
+                {
+                  return document.querySelector('#form-1' + ' #password').value;
+                },'Re-enter incorrect password'),
+                Validator.isMinlength('#confirmPassword',6,'Please enter at least 6 characters'),
                 Validator.isRequired('#email','Please enter this field'),
                 Validator.isEmail('#email','This field must be email'),
                 Validator.isMinlength('#password',6,'Please enter at least 6 characters'),

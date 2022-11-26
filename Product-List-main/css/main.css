@@ -18,11 +18,15 @@
 .header__navbar-list
 {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     color: var(--white-color);
     list-style: none;
     line-height: 96px;
-    
+    height: 100%;
+}
+.list
+{
+    height: 100%;
 }
 .header__navbar-list-item a
 {
@@ -41,22 +45,8 @@
     position: relative;
     /* transition: all ease-in 1s; */
 }
-.header__navbar-list-item:nth-child(7):after
-{
-    display: block;
-    position: absolute;
-    content: "";
-    width: 70px;
-    height: 3px;
-    right: 13px;
-    border-radius: 2px;
-    top: 68%;
-    background-color: var(--white-color);
-}
-.header__navbar-list-item:nth-child(7):hover::after
-{
-    animation: fadeIn1 ease-in-out 400ms;
-}
+
+
 .header__navbar-list-item:nth-child(1):hover:after,
 .header__navbar-list-item:nth-child(3):hover:after,
 .header__navbar-list-item:nth-child(4):hover:after,
@@ -94,7 +84,7 @@
     display: block;
     position: absolute;
     content: "";
-    width: 69px;
+    width: 55px;
     height: 3px;
     right: 13px;
     border-radius: 2px;
@@ -124,7 +114,7 @@
     display: block;
     position: absolute;
     content: "";
-    width: 44px;
+    width: 85px;
     height: 3px;
     right: 14px;
     border-radius: 2px;
@@ -139,13 +129,13 @@
     display: block;
     position: absolute;
     content: "";
-    width: 87px;
+    width: 62px;
     height: 3px;
     right: 13px;
     border-radius: 2px;
     top: 68%;
     background-color: var(--white-color);
-    display: none;
+   
     animation: fadeIn1 ease-in-out 400ms;
     
 }
@@ -195,7 +185,6 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    z-index: 1;
 }
 .body__slider-img{
     width: 100%;
@@ -261,10 +250,16 @@
     position: absolute;
     top: 45%;
     left: 20%;
+    text-align: center;
 }
 .body__product-button--modal:hover{
     background-color: #000;
     transition: 0.4s;
+}
+.body__product-button--modal:hover a
+{
+    text-decoration: none;
+    color: #fff;
 }
 .body__product-button-text--modal{
     color: var(--white-color);
@@ -1166,10 +1161,150 @@ input[type='text']
     letter-spacing: 0.2px;
     color: rgba(0, 0, 0, 0.5);
 }
-.form_option
+.filter-types
 {
     display: flex;
 }
+.form_option
+{
+    display: flex;
+    flex-direction: column;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
+
+#squaredcheck
+{
+    width: 50%;
+    padding: 5px;
+}
+.filter-price-checkbox
+{
+    display: flex;
+}
+.option_types
+{
+    display: flex;
+}
+
+
+/* avatar */
+.avatar
+{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.hover_user:hover .nav_ava
+{
+    display: block;
+}
+.icon_avatar
+{
+    font-size: 27px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    padding: 0px;
+    cursor: pointer;
+}
+.icon_avatar i
+{
+    transform: translateX(10px) translateY(-25px);
+}
+.name_user
+{
+    margin-left: 6px;
+    font-size: 18px;
+}
+.list-user
+{
+    width: 130px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+}
+.nav_ava
+{
+    position: absolute;
+    
+   
+    cursor: pointer;
+    left: 16px;
+    top: 80px;
+    display: none   ;
+}
+@keyframes fadeNav {
+    0%
+    {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.modal_nav
+{
+    position: absolute;
+    content: "";
+    display: block;
+    top: -53px;
+    border: 36px solid;
+    right: -150px;
+    border-color: transparent transparent #fff transparent;
+}
+.header__navbar-list-item:nth-child(7):hover .nav_ava
+{
+    display: block;
+    transition: all ease-in-out 1s;
+    /* animation: fadeIn ease-in-out 1s; */
+}
+.nav_ava_list:hover a
+{
+    color: #000;
+}
+.nav_ava_list:hover
+{
+    opacity: 0.8;
+}
+.nav_ava_list
+{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    color: #000;
+    height: 45px;
+    justify-content: space-around;
+    width: 100px;
+    animation: fadeNav linear 0.3s;
+}
+.nav_ava_a a
+{
+    font-size: 16px;
+    padding: 0;
+    color: #000 !important;
+}
+.span
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    right: 0px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms; 
+}

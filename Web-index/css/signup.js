@@ -187,7 +187,7 @@
     test(value)
     {
     var regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-    return regex.test(value) ? undefined : "Trường này phải là email"
+    return regex.test(value) ? undefined : message || "Trường này phải là email"
     }
     };
     }

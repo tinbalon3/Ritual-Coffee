@@ -46,7 +46,28 @@
                             <li class="header__navbar-list-item">
                                 <a href="/Product-List-main/index_productList.html" class="header__navbar-item-link">Products</a>
                                 </li>
-                            
+                                <li class="header__navbar-list-item">
+                                    <div class="avatar">
+                                        <div class="icon_avatar">
+                                            <i class="fa-solid fa-user-tie"></i>
+                                        </div>
+                                        <div class="name_user">
+                                            <p class="username_customer"></p>
+                                        </div>
+                                    </div>
+                                    <div class="nav_ava">
+                                        <div class="nav_ava_list">
+                                            
+                                            <div class="nav_ava_icon_out">
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </div>
+                                            <div class="nav_ava_a">
+                                                <a href="/Web-index/index.html">Log out</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span"></div>
+                                </li>
                         </ul>
                     </div>
                 </div>
@@ -437,7 +458,17 @@
                 main.appendChild(toast);
                 }
                 }
-               
+                function setWidth()
+        {
+            //Set width span nav_user
+            const widthOfname=document.querySelector('.username_customer').offsetWidth;
+            const usertNameElement = document.querySelector('.span');
+            console.log(widthOfname)
+            usertNameElement.style.width=widthOfname+'px';
+        }
+        var credentials = JSON.parse(localStorage.getItem("credentials"));
+            document.querySelector('.username_customer').innerHTML=credentials.name;
+            setWidth();
         </script>
         <script src="/Web-index/css/createLink.js"></script>
 

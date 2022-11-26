@@ -24,6 +24,16 @@ p {
     margin-left: -15px;
     
 }
+@keyframes fadeIn1{
+    0%
+    {
+        transform:scaleX(0);
+    }
+    to
+    {
+        transform:scaleX(1);
+    }
+}
 .align-items{
     align-items: center;
 }

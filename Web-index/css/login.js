@@ -15,7 +15,7 @@
                 {
                     isAdmin = true;
                     setConfig(isAdmin);
-                    location.replace("./index_login_success.html")
+                    location.replace("/Admin/admin.html")
                 }
                 else if (document.querySelector('.js-username-login').value ==credentials.email 
                 && document.querySelector('.js-pass-login').value==credentials.password ) 
@@ -143,7 +143,7 @@
             test(value)
             {
             var regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-            return regex.test(value) ? undefined : message || "Trường này phải là email"
+            return regex.test(value) ? undefined : message || "Trường này phải là email";
             }
             };
             }
