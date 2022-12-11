@@ -353,14 +353,15 @@ input[type='text']
     margin: 20px 0;
     position: relative;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .table_header-name-list p
 {
     font-size: 1.6rem;
     margin: 0;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #9c8d91;
+    position: relative;
 }
 .table_header-name-list p.block
 {
@@ -368,10 +369,46 @@ input[type='text']
 }
 .table_header-name-list img
 {
-    width: 100%;
+    width: 35%;
     border-radius: 50%;
-    transform: translateX(-24px);
+    transform: translateX(-5px);
 }
+
+.table_header-name-list .User-img{
+    width: 15%;
+    border-radius: 50%;
+    transform: translateX(-5px);
+}
+
+.table_header-name-list .inline {
+    display: inline-flex;
+    align-items: center;
+}
+
+.serial-product,
+.amount-product,
+.price-order,
+.created-day-order,
+.status-order{
+    text-align: center;
+}
+
+.Pass_user {
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+}
+
+.option_select {
+    display: none;
+}
+
+.option_select.open{
+    display:block;
+}
+
+
+
 .js-item.delete
 {
     display: none;
@@ -379,8 +416,13 @@ input[type='text']
 .table_header-name-list
 {
     padding: 10px 30px;
-    width: 120px;
+    width: 220px;
 }
+
+.option_select {
+    /* display: none; */
+}
+
 .active_list
 {
     background-color: #f3efef;
@@ -445,6 +487,16 @@ input[type='text']
 {
     background-color: coral;
 }
+.table_header-name-list button
+{
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 4px 13px;
+    border-radius: 20px;
+    background-color: #4bacb8;
+    border:none;
+}
+
 .table_header-name-list a
 {
     text-decoration: none;
@@ -454,6 +506,16 @@ input[type='text']
     border-radius: 20px;
     background-color: #0ff222;
 }
+
+.product-name-list {
+    display: inline;
+}
+
+.status-list,
+.edit-list {
+    text-align: center;
+}
+
 .table_header-name-list a:hover
 {
     color: #fff;
@@ -603,7 +665,7 @@ label
 #input_day,
 select
 {
-    padding: 15px;
+    padding: 13px;
     font-size: 1.6rem !important;
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
     -webkit-appearance: none;
@@ -670,6 +732,11 @@ textarea
     text-decoration: none;
     color: #054b74 !important;
 }
+.product-add-img-1 p,
+.product-add-img p {
+    margin: 0;
+}
+
 .product-add-img-two
 {
     height: 100%;
@@ -678,6 +745,7 @@ textarea
 {
     width: 100%;
     height: 44%;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -709,6 +777,15 @@ textarea
     display: flex;
     flex-direction: column;
 }
+a:hover
+{
+    text-decoration: none !important;
+    
+}
+.special_1
+{
+    background-position-x: 420px;
+}
 .add_day p,
 .add_price p
 {
@@ -717,7 +794,7 @@ textarea
 }
 .special
 {
-    background-position-x: 290px;
+    background-position-x: 277px;
 }
 .price_item
 {

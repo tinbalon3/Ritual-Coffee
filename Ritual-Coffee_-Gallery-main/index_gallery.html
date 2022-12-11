@@ -3,22 +3,23 @@
     <head>
         <meta charset="utf-8">
         <title>Gallery</title>
+        <link rel="stylesheet" href="/Web-index/css/base.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/base.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700&family=Inconsolata:wght@200;300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700&family=Inconsolata:wght@200;300;400;500;700&family=Marcellus&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/css/all.css">
        <link rel="stylesheet" href="/Web-index/css/grid.css">
+       <link rel="stylesheet" href="/Web-index/bootstrap-4.0.0-dist/css/bootstrap.min.css">
     </head>
     <body>
         <div id="main">
             <div class="header js-header">
-                <div class="grid wide">
-                    <div class="header__navbar">
-                          <div class="header__navbar-item-img">
-                                    <img src="./img/logo.png" alt="" class="header-item-img">
+                <div class="container">
+                    <div class="row">
+                        <div class="header__navbar col-lg-12 col-md-12">
+                          <div class="header__navbar-item-img col-lg-2 ">
+                                <img src="./img/logo.png" alt="" class="header-item-img">
                          </div>
+                         <div class="list col-lg-10">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-list-item">
                                 <a href="/Web-index/index.html" class="header__navbar-item-link">Home</a>
@@ -26,7 +27,6 @@
                             <li class="header__navbar-list-item">
                                 <a href="/About-us-main/index_aboutus.html" class="header__navbar-item-link">About Us</a>
                                 </li>
-                           
                             <li class="header__navbar-list-item">
                                 <a href="/Ritual-Coffee_-Gallery-main/index_gallery.html" class="header__navbar-item-link"> Gallery</a>
                                </li>
@@ -39,16 +39,45 @@
                             <li class="header__navbar-list-item">
                                     <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link">Product</a>
                                 </li>
-                                <li class="header__navbar-list-item">
-                                    <div class="avatar">
-                                        <div class="icon_avatar">
-                                            <i class="fa-solid fa-user-tie"></i>
+                                <li class="header__navbar-list-item ">
+                                    <a href="/Web-index/login.html" class="header__navbar-item-link">Login</a>
+                                    </li>
+                                <li class="header__navbar-list-item login">
+                                        <div class="avatar">
+                                            <div class="icon_avatar">
+                                                <i class="fa-solid fa-user-tie"></i>
+                                            </div>
+                                            <div class="name_user">
+                                                <p class="username_customer"></p>
+                                            </div>
                                         </div>
+                                        <div class="nav_ava">
+                                            <div class="nav_ava_list">
+                                                
+                                                <div class="nav_ava_icon_out">
+                                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                                </div>
+                                                <div class="nav_ava_a" onclick="logout()">
+                                                    <a href="/Web-index/index.html">Log out</a>
+                                                </div>
+                                            </div>
+                                            <div class="nav_ava_list">  
+                                                <div class="nav_ava_icon_out">
+                                                    <i class="fa-solid fa-address-card"></i>
+                                                </div>
+                                                <div class="nav_ava_a">
+                                                    <a href="/DetailsHD/info.html">About You</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                </li>
+                                        <div class="span"></div>
+                                    </li>
+                                
                         </ul>
                     </div>
+                    </div>
                 </div>
+            </div>
             </div>
             <div id="body">
                
@@ -282,11 +311,7 @@
                     </div>
                 </div>
             </div>
-            <div class="cart">
-                <div class="cart_icon">
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
+           
         
             
 
@@ -309,7 +334,39 @@
             prevScrollpos = currentScrollPos;
             }
 
+            function setWidth()
+        {
+            //Set width span nav_user
+            const widthOfname=document.querySelector('.username_customer').offsetWidth;
+            const usertNameElement = document.querySelector('.span');
            
+            usertNameElement.style.width=widthOfname+'px';
+        }
+        // Check xem có phải admin hay không
+       var isUser = JSON.parse(localStorage.getItem("IsUser"))
+        //Nếu không thì là set name là customer
+        var list = document.querySelectorAll('.header__navbar-list-item');
+        if(isUser.value)
+        {
+            list[6].style.display="none";
+            list[7].classList.remove('login')
+           var credentials = JSON.parse(localStorage.getItem("credentials"));
+            document.querySelector('.username_customer').innerHTML=credentials.name;
+            setWidth();
+        }
+        function setConfig(value)
+                {
+                    localStorage.setItem(
+                        "IsUser",
+                        JSON.stringify({ value: value })
+                    );
+                }
+        function logout()
+        {
+            list[6].style.display="block";
+            list[7].classList.add('login')
+            setConfig(false)
+        }
             
         </script>
         <script src="/Web-index/css/createLink.js"></script>

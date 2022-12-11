@@ -4,75 +4,84 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>CheckOut</title>
         <link rel="stylesheet" href="/Project/css/checkout.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/Web-index/css/grid.css">
+       <link rel="stylesheet" href="/Web-index/bootstrap-4.0.0-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/Project/Icon/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.css">
     </head>
 
     <body>
     <div class="content">
-        <div class="header">
-            <div class="header js-header">
-                <div class="grid wide">
-                    <div class="header__navbar">
-                        <div class="header__navbar-item-img">
-                                    <img src="/Project/img/logo.png" alt="" class="header-item-img">
-                        </div>
-                        <ul class="header__navbar-list">
-                            <li class="header__navbar-list-item">
-                                <a href="/Web-index/index_login_success.html" class="header__navbar-item-link">Home</a>
+        
+        <div class="header js-header">
+            <div class="container">
+                <div class="row">
+                    <div class="header__navbar col-lg-12 col-md-12">
+                      <div class="header__navbar-item-img col-lg-2 ">
+                            <img src="/Web-index/img/logo.png" alt="" class="header-item-img">
+                     </div>
+                     <div class="list col-lg-10">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-list-item">
+                            <a href="/Web-index/index.html" class="header__navbar-item-link">Home</a>
+                            </li>
+                        <li class="header__navbar-list-item">
+                            <a href="/About-us-main/index_aboutus.html" class="header__navbar-item-link">About Us</a>
+                            </li>
+                      
+                        <li class="header__navbar-list-item">
+                            <a href="/Ritual-Coffee_-Gallery-main/index_gallery.html" class="header__navbar-item-link"> Gallery</a>
+                           </li>
+                        <li class="header__navbar-list-item">
+                            <a href="/Project/html/blog_detail1.html" class="header__navbar-item-link">Blogs</a>
+                            </li>
+                        <li class="header__navbar-list-item">
+                            <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
                             </li>
                             <li class="header__navbar-list-item">
-                                <a href="/About-us-main/index_aboutus.html" class="header__navbar-item-link">About Us</a>
-                            </li>
-                            <li class="header__navbar-list-item">
-                                <a href="" class="header__navbar-item-link">Services</a>
-                            </li>
-                            <li class="header__navbar-list-item">
-                                <a href="/Ritual-Coffee_-Gallery-main/index_gallery.html" class="header__navbar-item-link"> Gallery</a>
-                            </li>
-                            <li class="header__navbar-list-item">
-                                <a href="" class="header__navbar-item-link">Blogs</a>
-                            </li>
-                            <li class="header__navbar-list-item">
-                                <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
-                            </li>
-                            <li class="header__navbar-list-item">
-                                <a href="/Product-List-main/index_productList.html" class="header__navbar-item-link">Products</a>
+                                <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link product">Product</a>
                                 </li>
-                                <li class="header__navbar-list-item">
-                                    <div class="avatar">
-                                        <div class="icon_avatar">
-                                            <i class="fa-solid fa-user-tie"></i>
+                        <li class="header__navbar-list-item ">
+                            <a href="/Web-index/login.html" class="header__navbar-item-link">Login</a>
+                            </li>
+                        <li class="header__navbar-list-item login">
+                                <div class="avatar">
+                                    <div class="icon_avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                    <div class="name_user">
+                                        <p class="username_customer"></p>
+                                    </div>
+                                </div>
+                                <div class="nav_ava">
+                                    <div class="nav_ava_list">
+                                        
+                                        <div class="nav_ava_icon_out">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
                                         </div>
-                                        <div class="name_user">
-                                            <p class="username_customer"></p>
+                                        <div class="nav_ava_a" onclick="logout()">
+                                            <a href="/Web-index/index.html">Log out</a>
                                         </div>
                                     </div>
-                                    <div class="nav_ava">
-                                        <div class="nav_ava_list">
-                                            
-                                            <div class="nav_ava_icon_out">
-                                                <i class="fa-solid fa-right-from-bracket"></i>
-                                            </div>
-                                            <div class="nav_ava_a">
-                                                <a href="/Web-index/index.html">Log out</a>
-                                            </div>
+                                    <div class="nav_ava_list">  
+                                        <div class="nav_ava_icon_out">
+                                            <i class="fa-solid fa-address-card"></i>
+                                        </div>
+                                        <div class="nav_ava_a">
+                                            <a href="/DetailsHD/info.html">About You</a>
                                         </div>
                                     </div>
-                                    <div class="span"></div>
-                                </li>
-                        </ul>
-                    </div>
+                                </div>
+                                <div class="span"></div>
+                            </li>
+                    </ul>
+                </div>
                 </div>
             </div>
         </div>
+        </div>
+        
 
         <div class="slider-page">
             <div class="display-img">
@@ -155,20 +164,10 @@
                                                 <th class="product-total">Total</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr class="cart-items">
-                                                <th class="product-name">
-                                                    <span class="js-name">kenya coffee</span>
-                                                    <strong class="product-quantity">x <span class="js-qty">1</span></strong>
-                                                </th>
-                                               
-                                                <th class="product-total">
-                                                    <span class="price-amout">
-                                                        <span class="price-symbol">$</span>
-                                                        <span class="js-price">23.00</span>
-                                                    </span>
-                                                </th>
-                                            </tr>
+                                        <tbody class="parent">
+                                            
+                                                
+                                          
                                            
                                         </tbody>
                                         <tfoot>
@@ -183,7 +182,6 @@
                                                 <td>
                                                     <strong>
                                                         <span class="price-amount">
-                                                            <span class="price-symbol">$</span>
                                                             <span class="js-total"></span> 
                                                         </span>
                                                     </strong>
@@ -374,102 +372,8 @@
         
         </div>
     </body>
-        <script>
-            const orderBtn = document.querySelector('.button-alt');
-             //when scroll, header will change
-            var prevScrollpos = window.pageYOffset;
-            window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-            document.querySelector('.header').style.top = "0";
-            document.querySelector('.header').classList.add('thaydoiheader');
-            } else {
-            document.querySelector('.header').style.top = "-96px";
-            }
-            if(currentScrollPos == 0)
-            {
-                document.querySelector('.header').classList.remove('thaydoiheader');
-            }
-            prevScrollpos = currentScrollPos;
-            }
-                var Item=JSON.parse(localStorage.getItem("Item"));
-                document.querySelector('.js-name').innerHTML=Item.name; 
-                document.querySelector('.js-qty').innerHTML=Item.value;
-                document.querySelector('.js-price').innerHTML=Item.price;
-                var total_product=parseInt(document.querySelector('.js-price').innerHTML)*parseInt( document.querySelector('.js-qty').innerHTML);
-                document.querySelector('.js-total').innerHTML=total_product + ".00";
-
-
-
-                function showSuccessToast() {
-                toast({
-                title: "Successfully!",
-                message: "You have successfully paid for your order.",
-                type: "success",
-                duration: 5000
-                });
-                orderBtn.innerHTML=`<a href="/Product-List-main/index_productList.html">Return To Product Page</a>`
-               
-                }
-                
-                function toast({ title = "", message = "", type = "info", duration = 3000 }) {
-                const main = document.getElementById("toast");
-                if (main) {
-                const toast = document.createElement("div");
-
-                // Auto remove toast
-                const autoRemoveId = setTimeout(function () {
-                main.removeChild(toast);
-                }, duration + 1000);
-
-                // Remove toast when clicked
-                toast.onclick = function (e) {
-                if (e.target.closest(".toast__close")) {
-                main.removeChild(toast);
-                clearTimeout(autoRemoveId);
-                }
-                };
-
-                // const icons = {
-                // success: "fas fa-check-circle",
-                // info: "fas fa-info-circle",
-                // warning: "fas fa-exclamation-circle",
-                // error: "fas fa-exclamation-circle"
-                // };
-                // const icon = icons[type];
-                const delay = (duration / 1000).toFixed(2);
-
-                toast.classList.add("toast", `toast--${type}`);
-                toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
-                //Có thể thêm dòng này vào thay chỗ icon
-                // <i class="${icon}"></i>
-                toast.innerHTML = `
-                <div class="toast__icon">
-                <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="toast__body">
-                <h3 class="toast__title">${title}</h3>
-                <p class="toast__msg">${message}</p>
-                </div>
-                <div class="toast__close">
-                <i class="fas fa-times"></i>
-                </div>
-                `;
-                main.appendChild(toast);
-                }
-                }
-                function setWidth()
-        {
-            //Set width span nav_user
-            const widthOfname=document.querySelector('.username_customer').offsetWidth;
-            const usertNameElement = document.querySelector('.span');
-            console.log(widthOfname)
-            usertNameElement.style.width=widthOfname+'px';
-        }
-        var credentials = JSON.parse(localStorage.getItem("credentials"));
-            document.querySelector('.username_customer').innerHTML=credentials.name;
-            setWidth();
-        </script>
+    <script src="/Web-index/css/isUser.js"></script>
+        <script src="/Project/css/checkout.js"></script>
         <script src="/Web-index/css/createLink.js"></script>
 
 </html>

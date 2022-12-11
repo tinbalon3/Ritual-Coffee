@@ -417,11 +417,14 @@ function RenderFirstAroma()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     
@@ -446,11 +449,14 @@ function RenderFirstBeans()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     
@@ -475,11 +481,14 @@ function RenderFirstBlack()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     
@@ -504,11 +513,14 @@ function RenderFirstCasual()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     
@@ -533,11 +545,14 @@ function RenderFirstClassic()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     
@@ -562,11 +577,14 @@ function RenderFirstCream()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     
@@ -591,11 +609,14 @@ function RenderFirstElegant()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     
@@ -620,11 +641,14 @@ function RenderFirstFresh()
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
                         <div class="body__product-img--modal">
-                            <a href="${product1.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
-                                </div>
-                            </a>
+                            <div class="body__product-button--modal js-BtnAdd" onclick="rename(this,{
+                                name: '${product1.name}',
+                                price:${product1.price},
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
+                            </div>
                         </div>
                     </div>
     

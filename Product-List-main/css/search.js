@@ -12,7 +12,7 @@ var arrayOfProduct = [
     {
     id: 2,
     name: 'FRENCH PRESS',
-    price: '$23.99',
+    price: '$23.00',
     priceCurrent:23,
     image: '/Product-List-main/img/productList-img-21.png',
     link: '/Product-List-main/html/Detail_FrenchPress.html',
@@ -86,18 +86,18 @@ var arrayOfProduct = [
         {
         id: 1,
         name: 'ETHIOPIA COFFEE',
-        price: '$15.99',
+        price: '$15.00',
         priceCurrent:15,
-        image: './img/productList-img-1.png',
+        image: '/Product-List-main/img/productList-img-1.png',
         link:'/Product-List-main/html/Detail_ProductList.html',
         type:1
         },
         {
         id: 2,
         name: 'FRENCH PRESS',
-        price: '$23.99',
+        price: '$23.00',
         priceCurrent:23,
-        image: './img/productList-img-21.png',
+        image: '/Product-List-main/img/productList-img-21.png',
         link: '/Product-List-main/html/Detail_FrenchPress.html',
         type:4
         },
@@ -106,7 +106,7 @@ var arrayOfProduct = [
         name: 'KENYA COFFEE',
         price: '$18.00',
         priceCurrent:18,
-        image: './img/productList-img-3.png',
+        image: '/Product-List-main/img/productList-img-3.png',
         link: '/Product-List-main/html/Detail_KenyaCoffee.html',
         type:3
         },
@@ -115,7 +115,7 @@ var arrayOfProduct = [
         name: 'DOLCE GUSTO',
         price: '$12.00',
         priceCurrent:12,
-        image: './img/backgroundCopy_1.png',
+        image: '/Product-List-main/img/backgroundCopy_1.png',
         link: '/Product-List-main/html/Detail_DolceGusto.html',
         type:4
         },
@@ -124,7 +124,7 @@ var arrayOfProduct = [
         name: 'Columbia Coffee',
         price: '$21.00',
         priceCurrent:21,
-        image: './img/productList-img-5.png',
+        image: '/Product-List-main/img/productList-img-5.png',
         link:'/Product-List-main/html/Detai_ColumbiaCoffee.html',
         type:6
         },
@@ -133,7 +133,7 @@ var arrayOfProduct = [
         name: 'Coffee Kettle',
         price: '$90.00',
         priceCurrent:90,
-        image: './img/ProductList-img-6.png',
+        image: '/Product-List-main/img/ProductList-img-6.png',
         link:'/Product-List-main/html/Detail_CoffeeKettle.html',
         type:1
         },
@@ -142,7 +142,7 @@ var arrayOfProduct = [
         name: 'Espresso Machine',
         price: '$600.00',
         priceCurrent:600,
-        image: './img/ProductList-img-7.png',
+        image: '/Product-List-main/img/ProductList-img-7.png',
         link:'/Product-List-main/html/Detail_EspressoMachine.html',
         type:5
         },
@@ -151,7 +151,7 @@ var arrayOfProduct = [
         name: 'Guatemala Coffee',
         price: '$25.00',
         priceCurrent:25,
-        image: './img/product-img-8.png',
+        image: '/Product-List-main/img/product-img-8.png',
         link:'/Product-List-main/html/Detail_Guatemala.html',
         type:3
         },
@@ -160,7 +160,7 @@ var arrayOfProduct = [
         name: 'Filter handle',
         price: '$80.00',
         priceCurrent:80,
-        image: './img/ProductList-img-9.png',
+        image: '/Product-List-main/img/ProductList-img-9.png',
         link:'/Product-List-main/html/Detail_FilterHandle.html',
         type:4
         },
@@ -237,6 +237,7 @@ var arrayOfProduct = [
     var valueProduct;
     var priceInput = document.querySelectorAll("#squaredcheck");
     var ValuePrice =[];
+    RenderFirst();
     function getPriceInput(priceInput,ValuePrice)
     {
         for (var i = 0; i<priceInput.length;i++)
@@ -369,24 +370,28 @@ var arrayOfProduct = [
                     value =
                     `
                     <div class="body__product col-lg-4" data-aos="fade-up">
-                    <div class="body__product-img-content">
-                        <img src="${product.image}" alt="Product image" class="body__product-img">
-                        <div class="body__product-img--modal">
-                            <a  href="${product.link}" class="body__product-img--modal-link">
-                                <div class="body__product-button--modal" ">
-                                    <h2 class="body__product-button-text--modal">Add to cart</h2>
+                        <div class="body__product-img-content">
+                            <img src="${product.image}" alt="Product image" class="body__product-img">
+                            <div class="body__product-img--modal" onclick="details(this,'${product.link}')">
+                                <div class="body__product-button--modal js-BtnAdd"  onclick="rename(this,{
+                                    name: '${product.name}',
+                                    price_current:${product.priceCurrent},
+                                    price:'${product.price}',
+                                    img:'${product.image}',
+                                    qty:1,
+                                })">
+                                    <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
                                 </div>
-                            </a>
+                            </div>
+                        </div>
+        
+                        <div class="body__product-text"> 
+                            <h2 class="body__product-name">${product.name}</h2>
+                            <h3 class="body__product-price">${product.price}</h3>
                         </div>
                     </div>
-    
-                    <div class="body__product-text"> 
-                        <h2 class="body__product-name">${product.name}</h2>
-                        <h3 class="body__product-price">${product.price}</h3>
-                    </div>
-                </div>
-               
-                    `
+                   
+                        `
                     htmls.push(value)
                 }
             })
@@ -410,9 +415,15 @@ var arrayOfProduct = [
                 <div class="body__product col-lg-4" data-aos="fade-up">
                     <div class="body__product-img-content">
                         <img src="${product1.image}" alt="Product image" class="body__product-img">
-                        <div class="body__product-img--modal">
-                            <div class="body__product-button--modal">
-                                <p class="body__product-img--modal-link body__product-button-text--modal js-BtnAdd" onclick="alert()">Add to cart</p>
+                        <div class="body__product-img--modal" onclick="details(this,'${product1.link}')">
+                            <div class="body__product-button--modal js-BtnAdd"  onclick="rename(this,{
+                                name: '${product1.name}',
+                                price_current:${product1.priceCurrent},
+                                price:'${product1.price}',
+                                img:'${product1.image}',
+                                qty:1,
+                            })">
+                                <p class="body__product-img--modal-link body__product-button-text--modal ">Add to cart</p>
                             </div>
                         </div>
                     </div>
@@ -425,18 +436,68 @@ var arrayOfProduct = [
                
                     `
     })
+    
     productList.innerHTML = firstpage.join('');
    }
 // khi click vào button add thì hiện view cart
-    // var BtnAdd = document.querySelector('.js-BtnAdd');
-    // BtnAdd.onclick = (e) => {
-    //     console.log(e.target)
-    // }
-    function alert()
-    {
-       document.querySelector('.js-BtnAdd').innerHTML = "View cart"
-    }
 
+    function resetConfig()
+    {
+        localStorage.removeItem("arrProduct");
+    }
+    resetConfig();
+    var productAdd=[];
+   function rename(element,object)
+   {
+         element.removeAttribute("onclick");
+         var subtotal;
+        if(object.price.split('.')[1] != '00')
+        {
+            subtotal = `${object.price}`;
+        }
+        else
+        {
+            subtotal = "$" + `${object.price_current}` + ".00" ;
+        }
+        
+        element.innerHTML = `<a href="/Project/html/Cart.html" class="body__product-img--modal-link body__product-button-text--modal ">View cart</a>`
+        var content =` <td class="product-remove">
+        <p class="remove js-remove" aria-label="Remove this item"><i class="fa-sharp fa-solid fa-trash"></i></p>
+        </td>
+        <td class="product-thumbnail">
+        <img src=${object.img} alt="" class="thumnail.info js-img">
+        </td>
+        <td class="product-name">
+        <p id="nameProduct">${object.name}</p>
+        </td>
+        <td class="product-price">
+        <span id="priceProduct">${object.price}</span>
+        </td>
+        <td class="product-quantity">
+        <span id="qtyProduct">${object.qty}</span>
+        </td>
+        <td class="product-quantity">
+        <div class="body__product-detail-quantity-button">
+        <input aria-label="quantity" class="input-qty js-qty" max="100" min="1" name="" type="number" value="1">
+        <div class="quantity-cal">
+        <input class="plus is-form" type="button" onclick="plus(this)" value="+">
+        <input class="minus is-form" type="button" onclick="minus(this)" value="-">
+        </div>
+        </div>
+        </td>
+        <td class="product-total">
+        <span id="totalProduct">${subtotal}</span>
+        </td>`;
+        productAdd.push(content);
+        localStorage.setItem("arrProduct",JSON.stringify({Item: productAdd}))
+   }
+   function details(element,link)
+   {
+        element.onclick = () => {
+            location.replace(link)
+        }
+   }
+  
 
 
 
@@ -480,4 +541,4 @@ var arrayOfProduct = [
 
     }
 
-    RenderFirst();
+    

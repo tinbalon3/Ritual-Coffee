@@ -7,19 +7,13 @@
     <title>Ritual Coffee</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.2.0-web/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Marcellus&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="/Web-index/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Web-index/css/aos.css">
+  
+
 </head>
 <body>
     <div class="loader" id="loader">
@@ -54,10 +48,39 @@
                             <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
                             </li>
                             <li class="header__navbar-list-item">
-                                <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link">Product</a>
+                                <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link product">Product</a>
                                 </li>
+                        <li class="header__navbar-list-item ">
+                            <a href="/Web-index/login.html" class="header__navbar-item-link">Login</a>
+                            </li>
                         <li class="header__navbar-list-item login">
-                            <a href="./login.html" class="header__navbar-item-link">Login</a>
+                                <div class="avatar">
+                                    <div class="icon_avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                    <div class="name_user">
+                                        <p class="username_customer"></p>
+                                    </div>
+                                </div>
+                                <div class="nav_ava">
+                                    <div class="nav_ava_list">  
+                                        <div class="nav_ava_icon_out">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                        </div>
+                                        <div class="nav_ava_a" onclick="logout()">
+                                            <a href="/Web-index/index.html">Log out</a>
+                                        </div>
+                                    </div>
+                                    <div class="nav_ava_list">  
+                                        <div class="nav_ava_icon_out">
+                                            <i class="fa-solid fa-address-card"></i>
+                                        </div>
+                                        <div class="nav_ava_a">
+                                            <a href="/DetailsHD/info.html">About You</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span"></div>
                             </li>
                     </ul>
                 </div>
@@ -71,7 +94,7 @@
                 <h2>Coffee Day</h2>
                 <h3>COME AND TRY OUR BEST COFFEE !</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="#" class="slider__button">
+                    <a href="/Product-List-main/index_no_login.html" class="slider__button">
                         Order Now
                     </a>
                
@@ -475,12 +498,12 @@
                             <div class="footer__toggle-menu col-lg-4 col-md-4">
                                 <h2 class="footer__toggle-menu-head">Quick links</h2>
                                 <ul class="list-unstyled list-hover">
-                                    <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Home</a></li>
-                                    <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>About us</a></li>
-                                    <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Services</a></li>
-                                    <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Gallery</a></li>
-                                    <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Blog</a></li>
-                                    <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Contact us</a></li>
+                                    <li class="item-unstyled list-hover item-unstyled-home" ><a href=""><i class="fa-solid fa-caret-right"></i>Home</a></li>
+                                    <li class="item-unstyled list-hover item-unstyled-AboutUs"><a href=""><i class="fa-solid fa-caret-right"></i>About us</a></li>
+                                    <li class="item-unstyled list-hover item-unstyled-service"><a href=""><i class="fa-solid fa-caret-right"></i>Services</a></li>
+                                    <li class="item-unstyled list-hover item-unstyled-gallery"><a href=""><i class="fa-solid fa-caret-right"></i>Gallery</a></li>
+                                    <li class="item-unstyled list-hover item-unstyled-blog"><a href=""><i class="fa-solid fa-caret-right"></i>Blog</a></li>
+                                    <li class="item-unstyled list-hover item-unstyled-contactus"><a href=""><i class="fa-solid fa-caret-right"></i>Contact us</a></li>
                                 </ul>
                             </div>
                             <div class="footer__toggle-menu col-lg-4 col-md-4">
@@ -660,16 +683,15 @@
                 </div>
             </div>
         </div>
-        <div class="cart">
-            <div class="cart_icon">
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
+        
         <a href="#head" class="scrollToTop" data-aos="fade-left"><i class="fa-solid fa-angles-up"></i></a>
     </div>
         <script type="text/javascript" src="./css/javascript.js"></script>
+        <script src="/Web-index/css/createLink.js"></script>
+       <script src="/Web-index/css/isUser.js"></script>
+       <script src="/Web-index/css/aos.js"></script>
        <script>
-        
+        AOS.init();
        </script>
 
 

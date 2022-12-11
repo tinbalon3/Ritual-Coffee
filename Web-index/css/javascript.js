@@ -266,4 +266,4 @@
                     },1200)
                     document.getElementById('loader').style.display='none';
                 };
-                AOS.init();
+                

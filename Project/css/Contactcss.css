@@ -33,6 +33,23 @@ body {
     align-items: center;
     height: 96px;
 }
+.header__navbar-list-item:nth-child(7):hover:after
+{
+    display: block;
+}
+.header__navbar-list-item:nth-child(7):after
+{
+position: absolute;
+content: "";
+width: 47px;
+height: 3px;
+right: 12px;
+border-radius: 2px;
+top: 68%;
+background-color: var(--white-color);
+display: none;
+animation: fadeIn1 ease-in-out 400ms;
+}
 .header__navbar-list
 {
     display: flex;
@@ -51,7 +68,7 @@ body {
 .header__navbar-list-item
 {
     position: relative;
-    /* transition: all ease-in 1s; */
+    cursor: pointer;
 }
 .header__navbar-list-item:nth-child(1):after
 {
@@ -71,7 +88,7 @@ body {
 .header__navbar-list-item:nth-child(4):hover:after,
 .header__navbar-list-item:nth-child(1):hover:after,
 .header__navbar-list-item:nth-child(6):hover:after,
-.header__navbar-list-item:nth-child(7):hover:after
+.header__navbar-list-item:nth-child(8):hover .span
 {
     display: block;
     
@@ -477,11 +494,13 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    height: 100%;
 }
 .footer__border{
     border-bottom: 1px solid #232323;
     padding: 72px 0;
     display: flex;
+    height: 100%;
 }
 .footer__logo-text{
     padding-right: 100px;
@@ -558,17 +577,21 @@ body {
     align-content: center;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
+a:hover
+{
+    text-decoration: none !important;
+    color: #fff !important;
+}
 
 .footer__sub-container{
-    width: 1370px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    background-color: #000;
 }
 .footer_copyright p{
     font: 400 15px/17px "Cairo", Helvetica, sans-serif;
@@ -700,12 +723,25 @@ body {
     color: #fff;
     border-radius: 50%;
 }
+.header__navbar-list-item:nth-child(8):hover .nav_ava
+{
+    display: block;
+    transition: all ease-in-out 1s;
+
+}
+.avatar
+{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .icon_avatar
 {
-    font-size: 1.8rem;
+    font-size: 27px;
     display: inline-block;
     width: 45px;
-    transform: translateY(27px);
     height: 45px;
     background-color: #fff;
     color: #000;
@@ -716,4 +752,104 @@ body {
 .icon_avatar i
 {
     transform: translateX(10px) translateY(-25px);
+}
+.name_user
+{
+    margin-left: 6px;
+    font-size: 18px;
+}
+.list-user
+{
+    width: 130px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+}
+.nav_ava
+{
+    position: absolute;
+    
+   
+    cursor: pointer;
+    left: 16px;
+    top: 80px;
+    display: none   ;
+}
+@keyframes fadeNav {
+    0%
+    {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal_nav
+{
+    position: absolute;
+    content: "";
+    display: block;
+    top: -53px;
+    border: 36px solid;
+    right: -150px;
+    border-color: transparent transparent #fff transparent;
+}
+.header__navbar-list-item:nth-child(7):hover .nav_ava
+{
+    display: block;
+    transition: all ease-in-out 1s;
+    /* animation: fadeIn ease-in-out 1s; */
+}
+.nav_ava_list:hover a
+{
+    color: #000;
+}
+.nav_ava_list:hover
+{
+    opacity: 0.8;
+}
+.nav_ava_list
+{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    color: #000;
+    height: 45px;
+    line-height: 100%;
+    justify-content: space-around;
+    width: 100px;
+    animation: fadeNav linear 0.3s;
+}
+.nav_ava_a a
+{
+    font-size: 16px;
+    padding: 0;
+    color: #000 !important;
+}
+.span
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    right: 0px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms; 
+}
+.list 
+{
+    height: 100%;
+}
+.header__navbar-list-item.login
+{
+    display: none;
 }

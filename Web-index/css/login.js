@@ -1,6 +1,6 @@
             
             const loginBtn = document.querySelector('.js-button');
-            var isAdmin = false;
+            var isUser = false;
             const nameofaccount="Văn Sìnl";
             const name_admin='tinbalon2';
             const pass_admin='123456';
@@ -13,16 +13,15 @@
                 if((document.querySelector('.js-username-login').value ==name_admin 
                 && document.querySelector('.js-pass-login').value==pass_admin))
                 {
-                    isAdmin = true;
-                    setConfig(isAdmin);
-                    location.replace("/Admin/admin.html")
+                    
+                    location.replace("/Website-Admin-main/Admin/admin.html")
                 }
                 else if (document.querySelector('.js-username-login').value ==credentials.email 
                 && document.querySelector('.js-pass-login').value==credentials.password ) 
                 {
-                    isAdmin = false;
-                    setConfig(isAdmin);
-                    location.replace("./index_login_success.html")
+                    isUser = true;
+                    setConfig(isUser);
+                    location.replace("./index.html")
                 } 
                 else 
                 {
@@ -36,8 +35,8 @@
                 function setConfig(value)
                 {
                     localStorage.setItem(
-                        "IsAdmin",
-                        JSON.stringify({ isAdmin: value })
+                        "IsUser",
+                        JSON.stringify({ value: value })
                     );
                 }
 

@@ -4,18 +4,13 @@
 }
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 html{
     font-family: 'Cairo', sans-serif;
     width: 100%;
 }
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
+
 .row {
     display: -webkit-box;
     display: -ms-flexbox;
